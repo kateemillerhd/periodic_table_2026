@@ -31,5 +31,5 @@ else
   BOILING=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = $NUMBER")
   MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = $NUMBER")
 
-
+  echo -e "The element with atomic number $NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $MASS amu. $NAME has a melting point of $MELTING celsius and a boiling point of $BOILING celsius."
 fi
